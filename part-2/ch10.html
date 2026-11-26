@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 10 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 10</span>
+<h2>Input aur Operators</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> user se value lena, calculation karna aur comparison likhna.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Calculator se lekar game tak har program user se kuch leta hai aur us par math ya check chalata hai.</p>
+
+<h3>Input ka flow</h3>
+<p>User type karta hai, <code>input()</code> use program tak laata hai, aur hum use variable me rakhte hain.</p>
+<pre><code>naam = input("Naam batao: ")
+print("Hello", naam)</code></pre>
+<div class="warn"><b>Dhyan do:</b> <code>input()</code> hamesha <b>text (str)</b> deta hai, chahe tum number hi type karo. Number chahiye to <code>int(input())</code> likho.</div>
+<pre><code>a = int(input("Pehla number: "))
+b = int(input("Doosra number: "))
+print("Jod:", a + b)</code></pre>
+<h3>Arithmetic operators</h3>
+<div class="scroll"><table>
+<tr><th>Operator</th><th>Kaam</th><th>Example</th><th>Result</th></tr>
+<tr><td><code>+ - *</code></td><td>Jodna, ghatana, guna</td><td><code>3 * 4</code></td><td>12</td></tr>
+<tr><td><code>/</code></td><td>Normal division</td><td><code>7 / 2</code></td><td>3.5</td></tr>
+<tr><td><code>//</code></td><td>Floor division (poora hissa)</td><td><code>7 // 2</code></td><td>3</td></tr>
+<tr><td><code>%</code></td><td>Modulo (bacha hua)</td><td><code>7 % 2</code></td><td>1</td></tr>
+<tr><td><code>**</code></td><td>Power</td><td><code>2 ** 3</code></td><td>8</td></tr>
+</table></div>
+<p><b>Modulo ka asli use:</b> <code>n % 2 == 0</code> ho to number even hai.</p>
+<h3>Comparison aur logical</h3>
+<p>Comparison: <code>==  !=  &gt;  &lt;  &gt;=  &lt;=</code>. Ye <code>True</code> ya <code>False</code> dete hain. Logical: <code>and</code>, <code>or</code>, <code>not</code>.</p>
+<h3>Precedence</h3>
+<p>Pehle <code>**</code>, phir <code>* / // %</code>, phir <code>+ -</code>. Shak ho to brackets lagao: <code>(2 + 3) * 4</code> = 20.</p>
+<h3>Truthy aur falsy</h3>
+<p>Ye cheezein <code>False</code> maani jaati hain: <code>0</code>, <code>""</code>, <code>None</code>, khaali list. Baaki sab <code>True</code>.</p>
+<div class="warn"><b>Float ka jhol:</b> <code>0.1 + 0.2</code> ka result <code>0.30000000000000004</code> aata hai. Computer decimals ko binary me approx rakhta hai, isliye floats ko <code>==</code> se compare mat karo.</div>
+<h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li><code>input()</code> se naam lekar "Hello, naam" print karo.</li><li><code>10 % 3</code> ka result batao.</li></ol></div><div class="do"><b>Medium</b><ol><li>Do number lekar unka jod, guna aur <code>//</code> print karo.</li><li>Check karo ki koi number even hai ya odd (True/False print karo).</li></ol><details><summary>Hint 1</summary>Dono ko <code>int(input())</code> se lo.</details><details><summary>Hint 2</summary><code>% 2 == 0</code> use karo.</details><details><summary>Solution</summary><code>print(a + b, a * b, a // b)</code><br><code>print(n % 2 == 0)</code> even par True deta hai.</details></div><div class="do"><b>Challenge</b><ol><li>Ek mini calculator banao jo do number aur ek operator (<code>+ - * /</code>) le. Zero se divide karne par error na aaye, uska khayal rakho.</li></ol></div><div class="check"><b>Checkpoint</b><ol><li><code>input()</code> hamesha kya return karta hai?</li><li><code>7 // 2</code> aur <code>7 / 2</code> me fark?</li><li><code>0.1 + 0.2 == 0.3</code> kyun False aata hai?</li></ol></div><p><b>Summary:</b> <code>input()</code> text deta hai, number ke liye <code>int()</code> lagao. <code>//</code> poora hissa deta hai aur <code>%</code> bacha hua. Floats ko barabar check mat karo.</p><div class="nav"><a class="alt" href="ch09.html">Pichla</a><a class="alt" href="index.html">Part 2 ki list</a><a href="ch11.html">Agla</a></div></section></main></body></html>

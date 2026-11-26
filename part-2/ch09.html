@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 9 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 9</span>
+<h2>Print, Variables, Comments aur Data Types</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> variable banana, uska type pehchanna aur ek type se doosri type me badalna.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Har program data ke saath kaam karta hai, aur data ko naam dena variable se hi hota hai.</p>
+
+<h3>Variable asal me kya hai?</h3>
+<p>Variable ek <b>naam</b> hai jo kisi value (object) ko refer karta hai. Shuruat me ise "dabba" samajh sakte ho, par asal me naam ek label jaisa hai jo value par chipka hota hai.</p>
+<pre><code>naam = "Ishant"
+marks = 85
+percent = 85.5
+pass_hua = True
+kuch_nahi = None
+print(naam, marks)</code></pre>
+<div class="scroll"><table>
+<tr><th>Type</th><th>Matlab</th><th>Example</th></tr>
+<tr><td><code>int</code></td><td>Poora number</td><td>85, -3</td></tr>
+<tr><td><code>float</code></td><td>Dashmlav wala number</td><td>85.5</td></tr>
+<tr><td><code>str</code></td><td>Text</td><td>"Ishant"</td></tr>
+<tr><td><code>bool</code></td><td>Sahi ya galat</td><td>True, False</td></tr>
+<tr><td><code>None</code></td><td>Kuch nahi (khaali)</td><td>None</td></tr>
+</table></div>
+<h3>Type check aur conversion</h3>
+<pre><code>print(type(marks))      # &lt;class 'int'&gt;
+x = int("5")            # text se number
+y = str(5)              # number se text
+z = float("2.5")</code></pre>
+<p>Python me type pehle se likhni nahi padti, value dekhkar apne aap tay hoti hai. Isse <b>dynamic typing</b> kehte hain.</p>
+<h3>Naam rakhne ke rules</h3>
+<ul><li>Letters, digits aur <code>_</code> chalte hain, par digit se shuru nahi kar sakte.</li><li>Capital aur small alag hain: <code>Marks</code> aur <code>marks</code> do alag naam hain.</li><li><code>if</code>, <code>for</code> jaise keywords naam nahi ban sakte.</li><li>Convention: <code>total_marks</code> jaisa snake_case.</li></ul>
+<div class="warn"><b>Common mistakes</b><ul><li><code>"5" + 3</code> error deta hai, kyunki text aur number nahi jud sakte.</li><li><code>=</code> value rakhta hai, <code>==</code> barabar check karta hai.</li><li>Naam me space ya <code>-</code> daalna.</li></ul></div>
+<h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li><code>naam</code> naam ka variable banao aur print karo.</li><li><code>type(3.5)</code> ka output kya aayega?</li></ol></div><div class="do"><b>Medium</b><ol><li><code>a = 10</code>, <code>b = 3</code> rakho aur <code>a + b</code> print karo.</li><li><code>"7"</code> ko number banakar usme 3 jodo.</li></ol><details><summary>Hint 1</summary>Pehle dono variable banao, phir print me jodo.</details><details><summary>Hint 2</summary>Pehle <code>int()</code> se badlo.</details><details><summary>Solution</summary><code>print(a + b)</code> deta hai 13.<br><code>print(int("7") + 3)</code> deta hai 10.</details></div><div class="do"><b>Challenge</b><ol><li>Ek program likho jo apna naam, class aur marks 3 variables me rakhe aur teeno ka type print kare.</li></ol></div><div class="check"><b>Checkpoint</b><ol><li>Variable aur value me kya fark hai?</li><li><code>"5" + 3</code> error kyun deta hai?</li><li><code>=</code> aur <code>==</code> me fark batao.</li></ol></div><p><b>Summary:</b> Variable ek naam hai jo value ko refer karta hai. Python me type apne aap tay hoti hai, aur <code>int()</code>, <code>str()</code>, <code>float()</code> se type badal sakte hain.</p><div class="nav"><a class="alt" href="index.html">Pichla</a><a class="alt" href="index.html">Part 2 ki list</a><a href="ch10.html">Agla</a></div></section></main></body></html>

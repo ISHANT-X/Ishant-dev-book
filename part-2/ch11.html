@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 11 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 11</span>
+<h2>Conditions</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> if, elif aur else likhna, aur and, or, not ke saath condition banana.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Program sirf seedha nahi chalta. Login, game, discount, sab kuch condition se tay hota hai.</p>
+
+<h3>Program faisla kaise leta hai?</h3>
+<p>Rasta chunne ke liye hum condition likhte hain. Condition <code>True</code> ho to ek hissa chalta hai, warna doosra.</p>
+<svg viewBox="0 0 600 190" role="img" aria-label="Flowchart: marks 33 se zyada to Pass warna Fail">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7a5cff"/></marker></defs>
+<rect x="10" y="70" width="110" height="50" rx="25" fill="#ffc233"/><text x="65" y="101" text-anchor="middle" font-weight="700" fill="#1b2144">Start</text>
+<polygon points="250,50 340,95 250,140 160,95" fill="#3d9df5"/><text x="250" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">marks &gt;= 33 ?</text>
+<rect x="430" y="15" width="150" height="50" rx="14" fill="#22b8a0"/><text x="505" y="46" text-anchor="middle" font-weight="700" fill="#fff">Pass</text>
+<rect x="430" y="125" width="150" height="50" rx="14" fill="#ff6b6b"/><text x="505" y="156" text-anchor="middle" font-weight="700" fill="#fff">Fail</text>
+<path d="M120 95 H158" stroke="#7a5cff" stroke-width="3" marker-end="url(#ar)"/>
+<path d="M340 95 C390 95 390 40 428 40" stroke="#7a5cff" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+<path d="M250 140 C250 175 380 150 428 150" stroke="#7a5cff" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+<text x="385" y="55" font-size="13" font-weight="700" fill="#1b2144">Haan</text><text x="330" y="170" font-size="13" font-weight="700" fill="#1b2144">Nahi</text>
+</svg>
+<pre><code>marks = int(input("Marks: "))
+if marks &gt;= 75:
+    print("Distinction")
+elif marks &gt;= 33:
+    print("Pass")
+else:
+    print("Fail")</code></pre>
+<p><b>Indentation zaroori hai.</b> Python me andar wale hisse ko 4 space peeche karte hain. Isi se pata chalta hai ki kaun si line kis condition ke andar hai.</p>
+<h3>and, or, not ka truth table</h3>
+<div class="scroll"><table>
+<tr><th>A</th><th>B</th><th>A and B</th><th>A or B</th><th>not A</th></tr>
+<tr><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td></tr>
+<tr><td>True</td><td>False</td><td>False</td><td>True</td><td>False</td></tr>
+<tr><td>False</td><td>True</td><td>False</td><td>True</td><td>True</td></tr>
+<tr><td>False</td><td>False</td><td>False</td><td>False</td><td>True</td></tr>
+</table></div>
+<p><b>Chaining:</b> <code>0 &lt; x &lt; 10</code> Python me seedha likh sakte ho. <b>Nested</b> condition ek if ke andar doosra if hota hai, par zyada nesting se code uljhta hai.</p>
+<div class="warn"><b>Common mistakes</b><ul><li><code>if x = 5</code> likhna. Check ke liye <code>==</code> chahiye.</li><li>Indentation galat karna.</li><li><code>elif</code> ka order galat rakhna: pehle <code>&gt;= 33</code> likha to 80 marks wale ko bhi sirf "Pass" milega.</li></ul></div>
+<h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li>Number lekar batao positive hai ya negative.</li><li><code>True and False</code> ka result?</li></ol></div><div class="do"><b>Medium</b><ol><li>Age lekar batao vote de sakte hain ya nahi (18 ya zyada).</li><li>Teen number me se sabse bada print karo.</li></ol><details><summary>Hint 1</summary><code>if age &gt;= 18</code> likho.</details><details><summary>Hint 2</summary>Pehle do ki tulna karo, phir teesre se.</details><details><summary>Solution</summary><code>if age &gt;= 18: print("haan")</code>, <code>else: print("nahi")</code><br><code>m = a</code>, <code>if b &gt; m: m = b</code>, <code>if c &gt; m: m = c</code>, phir <code>print(m)</code></details></div><div class="do"><b>Challenge</b><ol><li>Ek grade calculator banao: marks lekar A, B, C ya Fail do. Marks 0 se 100 ke bahar ho to "galat input" bolo.</li></ol></div><div class="check"><b>Checkpoint</b><ol><li>Condition kab True maani jaati hai?</li><li><code>A or B</code> kab False hota hai?</li><li><code>elif</code> ka order kyun matter karta hai?</li></ol></div><p><b>Summary:</b> <code>if</code>, <code>elif</code>, <code>else</code> se program raasta chunta hai. Indentation se Python samajhta hai kaun si line kiske andar hai.</p><div class="nav"><a class="alt" href="ch10.html">Pichla</a><a class="alt" href="index.html">Part 2 ki list</a><a href="ch12.html">Agla</a></div></section></main></body></html>
