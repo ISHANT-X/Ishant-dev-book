@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 1 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main>
+<section class="card"><span class="tag">Chapter 1</span>
+<h2>Computer kaise kaam karta hai</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> computer ke main parts pehchanna, batana ki CPU asal me kya karta hai, aur ek chhota number binary me badalna.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Jab code chalta hai, to wahi parts kaam karte hain. Inhe samjhoge to errors aur slow programs samajhna aasaan ho jaata hai.</p>
+
+<h3>Rasoi wali analogy</h3>
+<svg viewBox="0 0 640 230" role="img" aria-label="Rasoi ka diagram: input, CPU, RAM, storage, output">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7a5cff"/></marker></defs>
+<rect x="8" y="70" width="108" height="90" rx="18" fill="#ffc233"/><text x="62" y="108" font-size="30" text-anchor="middle">🧾</text><text x="62" y="136" font-size="15" font-weight="700" text-anchor="middle" fill="#1d2144">Input</text>
+<rect x="166" y="70" width="108" height="90" rx="18" fill="#ff6b6b"/><text x="220" y="108" font-size="30" text-anchor="middle">👨‍🍳</text><text x="220" y="136" font-size="15" font-weight="700" text-anchor="middle" fill="#fff">CPU</text>
+<rect x="324" y="70" width="108" height="90" rx="18" fill="#3d9df5"/><text x="378" y="108" font-size="30" text-anchor="middle">🍽️</text><text x="378" y="136" font-size="15" font-weight="700" text-anchor="middle" fill="#fff">Output</text>
+<rect x="470" y="10" width="160" height="80" rx="18" fill="#22b8a0"/><text x="550" y="44" font-size="26" text-anchor="middle">🧰 RAM</text><text x="550" y="68" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">abhi ka kaam</text>
+<rect x="470" y="140" width="160" height="80" rx="18" fill="#7a5cff"/><text x="550" y="174" font-size="26" text-anchor="middle">🗄️ Storage</text><text x="550" y="198" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">hamesha ka saaman</text>
+<path d="M116 115 H162" stroke="#7a5cff" stroke-width="4" marker-end="url(#a)"/><path d="M274 115 H320" stroke="#7a5cff" stroke-width="4" marker-end="url(#a)"/>
+<path d="M274 95 Q380 40 466 50" stroke="#22b8a0" stroke-width="3" fill="none" stroke-dasharray="6 5" marker-end="url(#a)"/>
+<path d="M274 140 Q380 190 466 180" stroke="#7a5cff" stroke-width="3" fill="none" stroke-dasharray="6 5" marker-end="url(#a)"/>
+</svg>
+<div class="scroll"><table>
+<tr><th>Part</th><th>Kya karta hai</th></tr>
+<tr><td>CPU</td><td>Instructions chalata hai. Har instruction ke liye 3 kaam: <b>fetch</b> (RAM se uthana), <b>decode</b> (samajhna), <b>execute</b> (karna). Ye ek second me arabon baar hota hai.</td></tr>
+<tr><td>RAM</td><td>Temporary working memory. Jo program abhi chal raha hai, uska data yahan rehta hai. Bijli gayi to saaf.</td></tr>
+<tr><td>Storage (SSD/HDD)</td><td>Files hamesha ke liye. SSD tez hota hai, HDD sasta par slow.</td></tr>
+<tr><td>GPU</td><td>Graphics aur bahut saare chhote calculations ek saath. Games aur AI me kaam aata hai.</td></tr>
+<tr><td>Motherboard</td><td>Wo board jis par sab parts judte hain.</td></tr>
+</table></div>
+<div class="warn"><b>Dhyan rakho:</b> Analogy sirf samajhne ke liye hai. Asal me CPU sochta nahi, wo bas instructions ko fetch, decode aur execute karta hai.</div>
+<p><b>Isliye Ctrl+S zaroori hai.</b> Jo file save nahi hui, wo sirf RAM me hai. Save karne se wo storage me chali jaati hai.</p>
+
+<h3>Computer sab kuch 0 aur 1 me rakhta hai</h3>
+<p>Ek <b>bit</b> ya to 0 hota hai ya 1. 8 bits milkar 1 <b>byte</b>. 1 KB = 1024 bytes, 1 MB = 1024 KB, aur aage GB, TB.</p>
+<p><b>Decimal se binary:</b> number ko 2 se baar baar divide karo aur bache hue remainder neeche se upar padho. Example: 13 ÷ 2 = 6 baaki 1, 6 ÷ 2 = 3 baaki 0, 3 ÷ 2 = 1 baaki 1, 1 ÷ 2 = 0 baaki 1. Neeche se upar: <code>1101</code>. Matlab 13 = 1101.</p>
+<p>Text, photo aur audio bhi numbers me badalkar rakhe jaate hain. Jaise letter A ka number 65 hai.</p>
+
+<div class="warn"><b>Common mistakes</b><ul><li>RAM aur storage ko ek samajhna. RAM temporary hai, storage permanent.</li><li>Binary padhte waqt upar se neeche padhna. Division me remainder neeche se upar padhte hain.</li></ul></div>
+
+<h3>Khud karo</h3>
+<div class="do"><b>Easy</b><ol><li>Ctrl+Shift+Esc dabao (Task Manager) aur apni RAM, CPU, Disk dekho.</li><li>Bataao: 8 bits ka kya naam hai?</li></ol>
+<details><summary>Hint</summary>Task Manager ke Performance tab me dekho.</details></div>
+<div class="do"><b>Medium</b><ol><li>10 ko binary me badlo.</li><li>Binary 101 ko decimal me badlo.</li></ol>
+<details><summary>Hint</summary>10 ko 2 se divide karte jao. 101 me positions ki value hai 4, 2, 1.</details>
+<details><summary>Solution</summary>10 = 1010. 101 = 4 + 0 + 1 = 5.</details></div>
+<div class="do"><b>Challenge</b><ol><li>Apne dost ko 1 minute me samjhao ki CPU, RAM aur storage me kya fark hai, bina analogy ke.</li></ol></div>
+
+<div class="check"><b>Checkpoint</b><ol><li>Unsaved file light jaane pe kyun chali jaati hai?</li><li>CPU ke 3 kaam kaun se hain?</li><li>13 ka binary kya hai?</li></ol></div>
+<p><b>Summary:</b> CPU instructions chalata hai, RAM abhi ka kaam rakhta hai, storage hamesha ke liye. Sab kuch andar se 0 aur 1 hai.</p>
+<div class="nav"><a class="alt" href="index.html">Part 1 ki list</a><a class="alt" href="../index.html">Cover</a></div>
+</section></main></body></html>
