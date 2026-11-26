@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 7 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 7</span>
+<h2>Internet kaise kaam karta hai</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> batana ki browser se website tak request kaise jaati hai, aur DNS, HTTP, status code kya hain.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Backend, API aur web ka har kaam isi par khada hai.</p>
+<p>Tum <b>client</b> ho (browser ya app) aur website ka computer <b>server</b>. Client maangta hai (request), server jawab deta hai (response).</p>
+<svg viewBox="0 0 600 90" role="img" aria-label="Browser to DNS to Server to Page"><defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7a5cff"/></marker></defs><rect x="8" y="20" width="110" height="50" rx="14" fill="#7a5cff"/><text x="63" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Browser</text><path d="M120 45 H154" stroke="#7a5cff" stroke-width="3" marker-end="url(#ah)"/><rect x="158" y="20" width="110" height="50" rx="14" fill="#ffc233"/><text x="213" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">DNS</text><path d="M270 45 H304" stroke="#7a5cff" stroke-width="3" marker-end="url(#ah)"/><rect x="308" y="20" width="110" height="50" rx="14" fill="#3d9df5"/><text x="363" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Server</text><path d="M420 45 H454" stroke="#7a5cff" stroke-width="3" marker-end="url(#ah)"/><rect x="458" y="20" width="110" height="50" rx="14" fill="#22b8a0"/><text x="513" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Page</text></svg>
+<div class="scroll"><table><tr><th>Shabd</th><th>Matlab</th></tr>
+<tr><td>Internet vs Web</td><td>Internet network hai, Web uske upar chalne wali websites</td></tr>
+<tr><td>IP address</td><td>Device ka pata, jaise <code>142.250.77.46</code></td></tr>
+<tr><td>DNS</td><td>Naam (google.com) ko IP me badalne wali contact book</td></tr>
+<tr><td>Port</td><td>Ek computer ke andar ka darwaza number, jaise 443</td></tr>
+<tr><td>HTTP / HTTPS</td><td>Maangne-jawab ke niyam. HTTPS me connection encrypted hota hai</td></tr>
+<tr><td>localhost</td><td>Tumhara apna computer (<code>127.0.0.1</code>)</td></tr>
+<tr><td>JSON</td><td>Data bhejne ka simple format</td></tr></table></div>
+<p><b>HTTP methods:</b> GET (maangna), POST (bhejna), PUT/PATCH (badalna), DELETE (hatana).</p>
+<p><b>Status codes:</b> 200 sab theek, 301 page shift ho gaya, 400 request galat, 401 login chahiye, 403 allowed nahi, 404 nahi mila, 500 server me gadbad.</p>
+<pre><code>{ "city": "Kolkata", "temp": 29, "rain": false }</code></pre>
+<p>APIs isi tarah kaam karti hain: Python code server ko request bhejta hai aur JSON wapas aata hai.</p>
+<div class="warn"><b>Savdhaan:</b> HTTPS ka lock dikhna ye nahi batata ki site bharosemand hai. Wo sirf connection ko encrypt karta hai. Password ya OTP dalne se pehle site ka naam dhyan se dekho.</div><h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li>CMD me <code>ping google.com</code> chalao.</li><li>Chrome me F12, Network tab kholo aur page reload karo.</li></ol></div><div class="do"><b>Medium</b><ol><li><code>nslookup google.com</code> chalao aur IP dekho.</li><li>Network tab me ek request ka status code dhundo.</li></ol><details><summary>Hint 1</summary>CMD me command likho.</details><details><summary>Hint 2</summary>Ek row par click karo.</details><details><summary>Solution</summary>Google ka IP dikhta hai. Ye DNS ka kaam hai.<br>Aksar 200 milta hai.</details></div><div class="do"><b>Challenge</b><ol><li>Ek website ke liye likho ki browser me type karne se page dikhne tak kya-kya hota hai (DNS se response tak).</li></ol></div><div class="check"><b>Checkpoint</b><ol><li>DNS ke bina kya dikkat hoti?</li><li>Request aur response me kya fark hai?</li><li>404 aur 500 me kiski galti hai?</li></ol></div><p><b>Summary:</b> Client request bhejta hai, DNS naam ko IP banata hai, server response deta hai. Status code batata hai ki kya hua.</p><div class="nav"><a class="alt" href="ch06.html">Pichla</a><a class="alt" href="index.html">Part 1 ki list</a><a href="ch08.html">Agla</a></div></section></main></body></html>

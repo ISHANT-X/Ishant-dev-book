@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 4 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 4</span>
+<h2>VS Code aur Python kaise milke kaam karte hain</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> editor, interpreter aur terminal ka alag-alag kaam batana.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Beginners yahin sabse zyada confuse hote hain. Ye clear ho gaya to baaki aasaan hai.</p>
+<p>Teen alag cheezein hain:</p>
+<svg viewBox="0 0 600 90" role="img" aria-label="Editor (VS Code) to Interpreter (Python) to Terminal"><defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7a5cff"/></marker></defs><rect x="8" y="20" width="160" height="50" rx="14" fill="#7a5cff"/><text x="88" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Editor (VS Code)</text><path d="M170 45 H204" stroke="#7a5cff" stroke-width="3" marker-end="url(#ah)"/><rect x="208" y="20" width="160" height="50" rx="14" fill="#ff8a3d"/><text x="288" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Interpreter (Python)</text><path d="M370 45 H404" stroke="#7a5cff" stroke-width="3" marker-end="url(#ah)"/><rect x="408" y="20" width="160" height="50" rx="14" fill="#22b8a0"/><text x="488" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Terminal</text></svg>
+<p><b>VS Code Python nahi chalata.</b> Wo ek smart editor hai jisme code likhte hain. Code <b>Python interpreter</b> chalata hai, jo alag se install hota hai. VS Code bas use bulata hai.</p>
+<ul><li><b>IDE vs editor:</b> editor sirf likhne ke liye, IDE me debugger jaise zyada tools bhi hote hain. VS Code editor hai jo extensions se IDE jaisa ban jaata hai.</li>
+<li><b>Extension:</b> VS Code me jodne wala chhota software, jaise Python extension. Wo ▶ Run button, autocomplete aur debugger deta hai.</li>
+<li><b>Interpreter select karna:</b> VS Code ko batana padta hai ki kaun sa Python use kare.</li></ul>
+<h3>Roz ka loop</h3>
+<ol><li>Code likho</li><li>Save karo (Ctrl+S)</li><li>Chalao (<code>python hello.py</code> ya ▶)</li><li>Output padho</li><li>Error ho to sudharo</li></ol>
+<h3>Debugger kya hai</h3>
+<p>Debugger code ko ek-ek line chalata hai. <b>Breakpoint</b> lagao to code wahin ruk jaata hai aur tum variables dekh sakte ho.</p>
+<div class="warn"><b>Aam error:</b> <code>'python' is not recognized</code>. Matlab computer ko Python ka rasta nahi pata. Python dobara install karo aur <b>Add Python to PATH</b> ka tick lagao.</div><h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li>VS Code me <code>python-journey</code> folder kholo (File, Open Folder).</li><li><code>hello.py</code> me apna naam print karwao.</li></ol></div><div class="do"><b>Medium</b><ol><li>Terminal se <code>hello.py</code> chalao.</li><li>Jaan-boojh ke <code>pritn</code> likho aur error padho.</li></ol><details><summary>Hint 1</summary>Ctrl+` se terminal kholo.</details><details><summary>Hint 2</summary>Traceback me line number dekho.</details><details><summary>Solution</summary><code>python hello.py</code>.<br><code>NameError</code> aata hai, kyunki Python <code>pritn</code> ko nahi jaanta.</details></div><div class="do"><b>Challenge</b><ol><li>Ek line par breakpoint lagakar program chalao aur variable ki value dekho.</li></ol></div><div class="check"><b>Checkpoint</b><ol><li>Editor, interpreter aur terminal ka kaam alag batao.</li><li>Roz ka 5-step loop likho.</li><li>"python is not recognized" aaye to kya karoge?</li></ol></div><p><b>Summary:</b> VS Code likhne ke liye hai, Python chalane ke liye. Dono ka milna ek extension aur sahi interpreter se hota hai.</p><div class="nav"><a class="alt" href="ch03.html">Pichla</a><a class="alt" href="index.html">Part 1 ki list</a><a href="ch05.html">Agla</a></div></section></main></body></html>

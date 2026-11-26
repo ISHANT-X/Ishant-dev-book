@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 3 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 3</span>
+<h2>CMD / Terminal</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> terminal me folder badalna, files banana aur Python file chalana.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Developers ek line me wo kaam karte hain jo clicks me 10 step leta. Python bhi yahin se chalate hain.</p>
+<p>Terminal wo window hai jahan tum computer ko <b>likh ke</b> order dete ho. Uske andar ek program chalta hai, <b>shell</b>, jo tumhari line padhta hai aur OS ko batata hai.</p>
+<div class="scroll"><table><tr><th>Naam</th><th>Kya hai</th></tr>
+<tr><td>Terminal</td><td>Window jahan likhte ho</td></tr><tr><td>Shell</td><td>Line samajhne wala program</td></tr>
+<tr><td>CMD</td><td>Windows ka purana shell</td></tr><tr><td>PowerShell</td><td>Windows ka naya, zyada taakatwar shell</td></tr></table></div>
+<pre><code>C:\Users\Ishant&gt; mkdir python-journey
+C:\Users\Ishant&gt; cd python-journey
+C:\Users\Ishant\python-journey&gt; dir
+C:\Users\Ishant\python-journey&gt; python hello.py
+Hello</code></pre>
+<p>Line ke aage wala hissa <b>current working directory</b> hai, yaani tum abhi kis folder me ho.</p>
+<div class="scroll"><table><tr><th>Command</th><th>Kaam</th></tr>
+<tr><td><code>cd folder</code></td><td>Folder ke andar jao</td></tr><tr><td><code>cd ..</code></td><td>Ek folder peeche</td></tr>
+<tr><td><code>dir</code></td><td>Files dikhao</td></tr><tr><td><code>mkdir naam</code></td><td>Naya folder</td></tr>
+<tr><td><code>cls</code></td><td>Screen saaf</td></tr><tr><td><code>python file.py</code></td><td>Python file chalao</td></tr></table></div>
+<p><b>Arguments aur flags:</b> command ke aage extra baatein, jaise <code>python --version</code> me <code>--version</code> ek flag hai. <b>Redirect:</b> <code>dir &gt; files.txt</code> output ko file me daal deta hai.</p>
+<p><b>PATH:</b> ye ek list hai jo batati hai ki programs kahan rakhe hain. Isi se <code>python</code> likhte hi Python mil jaata hai.</p>
+<div class="warn"><b>Savdhaan:</b> internet se mili commands bina samjhe paste mat karo. <code>del</code> aur <code>format</code> jaisi commands files ya poora drive uda sakti hain.</div><h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li>Start me "cmd" kholo.</li><li><code>dir</code> chalao aur files dekho.</li></ol></div><div class="do"><b>Medium</b><ol><li><code>python-journey</code> folder me <code>cd</code> se jao.</li><li><code>dir &gt; files.txt</code> chalao aur file kholo.</li></ol><details><summary>Hint 1</summary>Pehle <code>cd Desktop</code>, phir folder ka naam.</details><details><summary>Hint 2</summary>Redirect ka matlab output ko file me bhejna.</details><details><summary>Solution</summary><code>cd Desktop</code> phir <code>cd python-journey</code>.<br>Folder me <code>files.txt</code> ban jaati hai jisme list hoti hai.</details></div><div class="do"><b>Challenge</b><ol><li>Ek naya folder banao, uske andar jao, wapas aao aur dekho current directory kab badli.</li></ol></div><div class="check"><b>Checkpoint</b><ol><li>Terminal aur shell me kya fark hai?</li><li><code>cd ..</code> kya karta hai?</li><li>Command paste karne se pehle kya check karoge?</li></ol></div><p><b>Summary:</b> Terminal window hai, shell command samajhne wala program. <code>cd</code>, <code>dir</code>, <code>mkdir</code> roz ke kaam ki commands hain.</p><div class="nav"><a class="alt" href="ch02.html">Pichla</a><a class="alt" href="index.html">Part 1 ki list</a><a href="ch04.html">Agla</a></div></section></main></body></html>
