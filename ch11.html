@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 11 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 11</span>
+<h2>Conditions</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> program ko faisla lena sikhana: if, elif aur else likhna, aur indentation sahi rakhna.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Login sahi hai ya nahi, marks se grade, game me jeete ya haare, sab faisle conditions se hote hain.</p>
+
+<h3>Rasta chunna</h3>
+<p><b>Analogy:</b> chauraahe par signal dekhkar tum rukte ho ya chalte ho. Program bhi condition (True ya False) dekhkar rasta chunta hai.</p>
+<svg viewBox="0 0 640 210" style="width:100%;height:auto" role="img" aria-label="Condition True ho to ek rasta, False ho to doosra">
+<defs><marker id="ar11" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3a3ae0"/></marker></defs>
+<rect x="20" y="75" width="140" height="60" rx="16" fill="#f5b52e"/><text x="90" y="110" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="18" fill="#1b1b3a">umar &gt;= 18 ?</text>
+<rect x="400" y="20" width="220" height="60" rx="16" fill="#22b8a0"/><text x="510" y="56" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="18" fill="#fff">True: "Vote de sakte ho"</text>
+<rect x="400" y="130" width="220" height="60" rx="16" fill="#ee6c4d"/><text x="510" y="166" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="18" fill="#fff">False: "Abhi nahi"</text>
+<path d="M162 95 C 260 95, 300 50, 396 50" stroke="#3a3ae0" stroke-width="3" fill="none" marker-end="url(#ar11)"/>
+<path d="M162 115 C 260 115, 300 160, 396 160" stroke="#3a3ae0" stroke-width="3" fill="none" marker-end="url(#ar11)"/>
+</svg>
+
+<h3>if, elif, else</h3>
+<pre><code>marks = int(input("Marks: "))
+if marks &gt;= 90:
+    print("Grade A")
+elif marks &gt;= 75:
+    print("Grade B")
+elif marks &gt;= 40:
+    print("Grade C")
+else:
+    print("Fail")</code></pre>
+<p><b>Expected output</b> (marks = 80): <code>Grade B</code></p>
+<p>Python upar se neeche condition check karta hai aur <b>pehli True</b> wali jagah ruk jata hai. Baaki ko dekhta bhi nahi. Isliye order matter karta hai: agar pehle <code>marks &gt;= 40</code> likhte, to 95 marks wale ko bhi Grade C milta.</p>
+
+<h3>Indentation hi structure hai</h3>
+<p>Python me <code>{ }</code> nahi hote. <b>Colon (<code>:</code>)</b> ke baad agli lines thodi andar (4 space) likhi jati hain, aur wahi block banta hai.</p>
+<pre><code>if True:
+    print("Ye if ke andar hai")
+    print("Ye bhi andar hai")
+print("Ye bahar hai, hamesha chalega")</code></pre>
+<p>Tab aur space ko mat milao. Editor me 4 space hi rakho.</p>
+
+<h3>Truthy aur Falsy</h3>
+<p>Python har value ko True ya False ki tarah maan sakta hai. <b>Falsy</b> values: <code>0</code>, <code>0.0</code>, <code>""</code> (khaali string), <code>[]</code>, <code>{}</code>, <code>None</code>, <code>False</code>. Baaki sab <b>Truthy</b> hain.</p>
+<pre><code>naam = ""
+if naam:
+    print("Naam mila")
+else:
+    print("Naam khaali hai")   # ye chalega</code></pre>
+
+<h3>Kaam ke patterns</h3>
+<pre><code>x = 15
+print(10 &lt; x &lt; 20)            # True  (chain comparison)
+print(x in [5, 15, 25])        # True  (list me hai?)
+print("py" in "python")        # True  (string me hai?)
+if x % 2 == 0: print("even")
+else: print("odd")             # odd
+
+status = "pass" if x &gt;= 10 else "fail"   # chhota if-else, ek line me
+print(status)                  # pass</code></pre>
+<p><b>Nested if:</b> if ke andar if. Par bahut zyada ho jaye to <code>and</code> se jodkar chhota karo.</p>
+<pre><code>umar = 20
+license = True
+if umar &gt;= 18 and license:
+    print("Gaadi chala sakte ho")</code></pre>
+<p><b>Ek line me jhalak:</b> Python 3.10 se <code>match ... case</code> bhi aata hai, jo bahut saare options me se ek chunne ke kaam aata hai. Abhi bas naam yaad rakho. Pakka seekhna zaroori nahi hai.</p>
+
+<div class="warn"><b>Common mistakes</b><ul>
+<li><code>if x = 5:</code> likhna. Compare karne ke liye <code>==</code> chahiye.</li>
+<li>Line ke ant me colon (<code>:</code>) bhool jana.</li>
+<li>Indentation galat ho to <code>IndentationError</code> aata hai.</li>
+<li><code>if x == 1 or 2:</code> likhna. Ye hamesha True rehta hai kyunki <code>2</code> alag se truthy hai. Sahi tarika: <code>if x == 1 or x == 2:</code> ya <code>if x in (1, 2):</code>.</li>
+<li><code>input()</code> ka jawab (str) ko number se compare karna, jaise <code>"18" &gt;= 18</code>. Ye error deta hai. Pehle <code>int()</code> karo.</li>
+<li>Ek hi <code>if</code> ke bajaye kai alag <code>if</code> likhna, jisse ek se zyada branch chal jati hain. Ek hi rasta chunna ho to <code>elif</code> use karo.</li>
+</ul></div>
+
+<h3>Khud karo</h3>
+<div class="do"><b>Easy</b><ol><li>Ek number lo aur batao positive hai ya negative.</li><li><code>bool("")</code> aur <code>bool("0")</code> ka jawab kya hoga?</li></ol></div>
+<div class="do"><b>Medium</b><ol><li>Marks lekar grade A, B, C ya Fail print karo.</li><li>Teen numbers me se sabse bada dhundo (<code>max</code> bina use kiye).</li></ol>
+<details><summary>Hint 1</summary>Upar se neeche chalne wala <code>if / elif / else</code> likho, bade marks wali condition pehle.</details>
+<details><summary>Hint 2</summary><code>if a &gt;= b and a &gt;= c</code> se shuru karo.</details>
+<details><summary>Solution</summary><code>bool("")</code> False hai, <code>bool("0")</code> True hai (kyunki string khaali nahi hai).<br>
+<code>if a &gt;= b and a &gt;= c: print(a)</code>, <code>elif b &gt;= c: print(b)</code>, <code>else: print(c)</code>.</details></div>
+<div class="do"><b>Challenge</b><ol><li>Leap year checker banao. Saal leap year tab hota hai jab 4 se poora bhaag ho, par 100 se bhaag ho to 400 se bhi hona chahiye. Jaise 2000 leap hai, 1900 nahi.</li></ol></div>
+<div class="check"><b>Checkpoint</b><ol><li><code>elif</code> aur alag-alag <code>if</code> me kya fark hai?</li><li>Python me block kaise banta hai?</li><li>Kaun si values Falsy hoti hain?</li></ol></div>
+<p><b>Summary:</b> <code>if / elif / else</code> pehli True condition ka block chalata hai. Colon aur indentation Python ka structure hain. Falsy values (0, khaali string, None) ko pehchano, aur <code>or</code> me har bar poori condition likho.</p>
+<div class="nav"><a class="alt" href="ch10.html">Pichla</a><a class="alt" href="index.html">Part 2 ki list</a><a href="ch12.html">Agla</a></div></section></main></body></html>

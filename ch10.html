@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 10 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 10</span>
+<h2>Input aur Operators</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> user se value lena, use sahi type me badalna aur arithmetic, comparison aur logical operators ka use karna.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Program tab kaam ka banta hai jab wo user se data le aur us par hisaab ya faisla kare. Input aur operators wahi kaam karte hain.</p>
+
+<h3>input() hamesha string deta hai</h3>
+<pre><code>naam = input("Tumhara naam: ")
+print("Namaste", naam)</code></pre>
+<p><b>Expected output</b> (user ne Ishant likha):</p>
+<pre><code>Tumhara naam: Ishant
+Namaste Ishant</code></pre>
+<p>User number type kare tab bhi <code>input()</code> use <b>str</b> hi deta hai. Isliye number chahiye to convert karo.</p>
+<svg viewBox="0 0 640 130" style="width:100%;height:auto" role="img" aria-label="input se str aata hai, int se number banta hai">
+<defs><marker id="ar10" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3a3ae0"/></marker></defs>
+<rect x="20" y="30" width="150" height="64" rx="16" fill="#f5b52e"/><text x="95" y="68" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="18" fill="#1b1b3a">User: 25</text>
+<rect x="250" y="30" width="150" height="64" rx="16" fill="#ee6c4d"/><text x="325" y="68" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-weight="700" font-size="20" fill="#fff">"25" (str)</text>
+<rect x="470" y="30" width="150" height="64" rx="16" fill="#22b8a0"/><text x="545" y="68" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-weight="700" font-size="20" fill="#fff">25 (int)</text>
+<path d="M172 62 L 246 62" stroke="#3a3ae0" stroke-width="3" marker-end="url(#ar10)"/>
+<path d="M402 62 L 466 62" stroke="#3a3ae0" stroke-width="3" marker-end="url(#ar10)"/>
+<text x="209" y="52" text-anchor="middle" font-family="Nunito,sans-serif" font-size="13" fill="#3a3ae0">input()</text>
+<text x="434" y="52" text-anchor="middle" font-family="Nunito,sans-serif" font-size="13" fill="#3a3ae0">int()</text>
+</svg>
+<pre><code>umar = int(input("Umar: "))
+print("Agle saal umar:", umar + 1)</code></pre>
+<p><b>Expected output</b> (user ne 15 likha): <code>Agle saal umar: 16</code></p>
+<p>Agar <code>int()</code> na lagao to <code>"15" + 1</code> error dega, kyunki str aur int nahi jud sakte. Dashamlav wale number ke liye <code>float(input())</code> use karo.</p>
+
+<h3>Arithmetic operators</h3>
+<div class="scroll"><table>
+<tr><th>Operator</th><th>Kaam</th><th>Example</th><th>Result</th></tr>
+<tr><td><code>+</code></td><td>Jodna</td><td><code>7 + 2</code></td><td>9</td></tr>
+<tr><td><code>-</code></td><td>Ghatana</td><td><code>7 - 2</code></td><td>5</td></tr>
+<tr><td><code>*</code></td><td>Guna</td><td><code>7 * 2</code></td><td>14</td></tr>
+<tr><td><code>/</code></td><td>Bhaag (hamesha float)</td><td><code>7 / 2</code></td><td>3.5</td></tr>
+<tr><td><code>//</code></td><td>Floor division (neeche wala poora number)</td><td><code>7 // 2</code></td><td>3</td></tr>
+<tr><td><code>%</code></td><td>Modulo (bacha hua hissa)</td><td><code>7 % 2</code></td><td>1</td></tr>
+<tr><td><code>**</code></td><td>Power</td><td><code>2 ** 3</code></td><td>8</td></tr>
+</table></div>
+<p><code>10 / 2</code> ka jawab <code>5.0</code> aata hai, <code>5</code> nahi. Floor division negative number par bhi "neeche wala" number deta hai: <code>-7 // 2</code> deta hai <code>-4</code>, <code>-3</code> nahi.</p>
+<p><b>Modulo ke kaam:</b> even/odd (<code>n % 2 == 0</code>), kisi number se poora bhaag hota hai ya nahi, aur ghante ya din ghumane ke liye.</p>
+
+<h3>Comparison operators (jawab hamesha True ya False)</h3>
+<div class="scroll"><table>
+<tr><th>Operator</th><th>Matlab</th></tr>
+<tr><td><code>==</code></td><td>Barabar hai?</td></tr>
+<tr><td><code>!=</code></td><td>Barabar nahi hai?</td></tr>
+<tr><td><code>&gt;</code> <code>&lt;</code></td><td>Bada, chhota</td></tr>
+<tr><td><code>&gt;=</code> <code>&lt;=</code></td><td>Bada ya barabar, chhota ya barabar</td></tr>
+</table></div>
+<p><b>Bahut zaroori:</b> <code>=</code> value ko naam se jodta hai, <code>==</code> do values ko compare karta hai.</p>
+
+<h3>Logical operators</h3>
+<pre><code>umar = 15
+print(umar &gt; 10 and umar &lt; 18)   # True  (dono sach hone chahiye)
+print(umar &lt; 10 or umar &gt; 12)    # True  (koi ek sach ho)
+print(not umar &gt; 10)             # False (ulta kar do)</code></pre>
+
+<h3>Assignment operators</h3>
+<pre><code>score = 10
+score += 5     # score = score + 5  -&gt; 15
+score -= 3     # 12
+score *= 2     # 24</code></pre>
+
+<h3>Operator ka order (precedence)</h3>
+<p>Pehle bracket <code>()</code>, phir <code>**</code>, phir <code>*  /  //  %</code>, phir <code>+  -</code>, phir comparison, aur sabse ant me <code>not</code>, <code>and</code>, <code>or</code>. Shak ho to bracket laga do.</p>
+<pre><code>print(2 + 3 * 4)     # 14
+print((2 + 3) * 4)   # 20</code></pre>
+
+<h3>Chhota mini-program</h3>
+<pre><code>a = float(input("Pehla number: "))
+b = float(input("Doosra number: "))
+print("Jod:", a + b)
+print("Bhaag:", a / b)</code></pre>
+<p>Agar <code>b</code> me 0 daala to <code>ZeroDivisionError</code> aayega. Ise sambhalna Chapter 16 me seekhoge.</p>
+
+<div class="warn"><b>Common mistakes</b><ul>
+<li><code>input()</code> ke jawab ko seedha number ki tarah use karna. <code>"5" + "3"</code> deta hai <code>"53"</code>, 8 nahi.</li>
+<li><code>=</code> aur <code>==</code> ko mila dena.</li>
+<li><code>/</code> se poora number (int) ki ummeed rakhna. Poore number ke liye <code>//</code> use karo.</li>
+<li><code>int("3.5")</code> likhna. Ye error deta hai. Pehle <code>float("3.5")</code> karo, phir chahiye to <code>int()</code>.</li>
+<li><code>and</code> aur <code>or</code> ka order bhool jana. Pehle <code>and</code> chalta hai, phir <code>or</code>.</li>
+</ul></div>
+
+<h3>Khud karo</h3>
+<div class="do"><b>Easy</b><ol><li>User se naam lo aur "Namaste, naam!" print karo.</li><li><code>17 // 5</code> aur <code>17 % 5</code> ka jawab likho.</li></ol></div>
+<div class="do"><b>Medium</b><ol><li>User se do numbers lo aur unka jod, ghatav, guna aur bhaag print karo.</li><li>Ek number lo aur batao ki wo even hai ya odd (True/False print karke).</li></ol>
+<details><summary>Hint 1</summary>Numbers ke liye <code>float(input())</code> ya <code>int(input())</code> use karo.</details>
+<details><summary>Hint 2</summary>Even ka matlab hai 2 se bhaag dene par 0 bachta hai.</details>
+<details><summary>Solution</summary><code>a = int(input()); b = int(input())</code> ke baad <code>print(a+b, a-b, a*b, a/b)</code>.<br><code>n = int(input()); print(n % 2 == 0)</code></details></div>
+<div class="do"><b>Challenge</b><ol><li>Seconds lo (jaise <code>3725</code>) aur unhe ghante, minute aur second me badlo. Output: <code>1 ghanta 2 minute 5 second</code>. (Hint: <code>//</code> aur <code>%</code> dono chahiye.)</li></ol></div>
+<div class="check"><b>Checkpoint</b><ol><li><code>input()</code> kaun sa type return karta hai?</li><li><code>/</code> aur <code>//</code> me kya fark hai?</li><li><code>=</code> aur <code>==</code> me kya fark hai?</li></ol></div>
+<p><b>Summary:</b> <code>input()</code> hamesha str deta hai, number chahiye to <code>int()</code> ya <code>float()</code>. Arithmetic se hisaab, comparison se True/False, aur <code>and or not</code> se conditions jodte hain. Order yaad na ho to bracket lagao.</p>
+<div class="nav"><a class="alt" href="ch09.html">Pichla</a><a class="alt" href="index.html">Part 2 ki list</a><a href="ch11.html">Agla</a></div></section></main></body></html>
