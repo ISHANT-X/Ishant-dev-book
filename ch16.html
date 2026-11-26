@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 16 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 16</span>
+<h2>Errors, Debugging aur Exception Handling</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> error padhna, try/except se sambhalna aur debugger se bug dhundhna.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Har programmer ke code me error aate hain. Fark ye hai ki acche programmer unhe aaram se padhkar sudharte hain.</p>
+<h3>Errors ke teen roop</h3><div class="scroll"><table><tr><th>Type</th><th>Matlab</th><th>Example</th></tr><tr><td>Syntax error</td><td>Code ka vyakaran galat, chalta hi nahi</td><td><code>print("hi"</code> (bracket band nahi)</td></tr><tr><td>Runtime error</td><td>Chalte waqt toot jaata hai</td><td><code>10 / 0</code></td></tr><tr><td>Logical error</td><td>Chalta hai par jawab galat</td><td>Average nikalte waqt <code>/ 2</code> ki jagah <code>/ 3</code></td></tr></table></div>
+<h3>Traceback kaise padhein</h3>
+<pre><code>Traceback (most recent call last):
+  File "hello.py", line 3, in &lt;module&gt;
+    print(10 / 0)
+ZeroDivisionError: division by zero</code></pre>
+<p><b>Neeche se upar padho.</b> Aakhri line batati hai kya hua (<code>ZeroDivisionError</code>), upar wali batati hai kahan (file aur line number).</p>
+<h3>try, except, else, finally</h3>
+<pre><code>try:
+    n = int(input("Number: "))
+    print(10 / n)
+except ValueError:
+    print("Number likho, text nahi")
+except ZeroDivisionError:
+    print("Zero se divide nahi hota")
+else:
+    print("Sab theek chala")
+finally:
+    print("Ye hamesha chalega")</code></pre>
+<p>Specific error pakdo. Sab kuch pakadne wala bina naam ka <code>except:</code> asli bug chhupa deta hai.</p>
+<pre><code>def umar(x):
+    if x &lt; 0:
+        raise ValueError("Umar negative nahi hoti")
+    return x
+assert umar(5) == 5   # galat ho to AssertionError</code></pre><div class="scroll"><table><tr><th>Error</th><th>Kab aata hai</th></tr><tr><td><code>ValueError</code></td><td><code>int("abc")</code></td></tr><tr><td><code>TypeError</code></td><td><code>"5" + 3</code></td></tr><tr><td><code>IndexError</code></td><td>List me nahi wali position</td></tr><tr><td><code>KeyError</code></td><td>Dictionary me nahi wali key</td></tr><tr><td><code>FileNotFoundError</code></td><td>File mili hi nahi</td></tr></table></div>
+<h3>Debugging ka tarika</h3>
+<ol><li>Error ki aakhri line padho.</li><li>Line number par jao.</li><li>Shak ho to <code>print()</code> se values dekho.</li><li>Phir bhi na mile to VS Code debugger me breakpoint lagao aur step over/into se chalo, Variables panel dekhte hue.</li></ol><div class="warn"><b>Common mistakes</b><ul><li>Error message ko bina padhe seedha copy karke poochna.</li><li>Ek saath bahut saari cheezein badalna. Ek-ek badlo aur chalao.</li><li>Khaali <code>except: pass</code> likhna.</li></ul></div><h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li><code>int("abc")</code> chalao aur error ka naam batao.</li><li>Kisi program me jaan-boojh ke ek line galat likho aur traceback padho.</li></ol></div><div class="do"><b>Medium</b><ol><li>Ek program likho jo number maange aur galat input par dobara maange (loop + try).</li><li><code>ZeroDivisionError</code> ko pakadkar "zero nahi" print karwao.</li></ol><details><summary>Hint 1</summary><code>while True</code> ke andar try lagao.</details><details><summary>Hint 2</summary><code>except ZeroDivisionError</code> likho.</details><details><summary>Solution</summary><code>while True: try: n = int(input()); break; except ValueError: print("phir se")</code> (har line alag indent me).<br><code>try: print(1/0)</code>, <code>except ZeroDivisionError: print("zero nahi")</code></details></div><div class="do"><b>Challenge</b><ol><li>Ek chhota calculator banao jo galat input, zero se divide aur galat operator, teeno ko alag-alag message ke saath sambhale.</li></ol></div><div class="check"><b>Checkpoint</b><ol><li>Traceback ko kis taraf se padhte hain?</li><li><code>finally</code> kab chalta hai?</li><li>Bina naam wala <code>except:</code> kyun kharab hai?</li></ol></div><p><b>Summary:</b> Error se darna nahi, use padhna hai. Traceback batata hai kya aur kahan. try/except ko specific rakho, aur debugger se line-by-line dekho.</p><div class="nav"><a class="alt" href="ch15.html">Pichla</a><a class="alt" href="index.html">Part 2 ki list</a><a href="index.html">Agla</a></div></section></main></body></html>

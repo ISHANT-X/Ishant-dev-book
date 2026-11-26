@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 13 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"></head>
+<body><main><section class="card"><span class="tag">Chapter 13</span>
+<h2>Strings</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> text ko index aur slice se kaatna, string methods lagana aur f-string se output sajana.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Naam, password, message, file ka text, sab kuch string hai. Isme pakad mazboot to aadha Python aasaan.</p>
+<p>String characters ki ek <b>kataar</b> hai. Har character ka ek number (index) hota hai, 0 se shuru.</p>
+<pre><code>s = "Ishant"
+print(s[0])      # I
+print(s[-1])     # t  (peeche se pehla)
+print(s[1:4])    # sha  (stop wala shamil nahi)
+print(s[::-1])   # tnahsI  (ulta)
+print(len(s))    # 6</code></pre>
+<div class="scroll"><table><tr><th>Letter</th><th>I</th><th>s</th><th>h</th><th>a</th><th>n</th><th>t</th></tr><tr><td>Index</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>Negative</td><td>-6</td><td>-5</td><td>-4</td><td>-3</td><td>-2</td><td>-1</td></tr></table></div>
+<p><b>Slicing:</b> <code>s[start:stop:step]</code>. Start shamil, stop shamil nahi.</p>
+<p><b>Immutable:</b> string ko badla nahi ja sakta. <code>s[0] = "A"</code> error deta hai. Naya string banana padta hai.</p>
+<h3>Zaroori methods</h3><div class="scroll"><table><tr><th>Method</th><th>Kaam</th><th>Example</th></tr><tr><td><code>upper() lower()</code></td><td>Capital ya small</td><td><code>"hi".upper()</code> = HI</td></tr><tr><td><code>strip()</code></td><td>Dono taraf ke space hatao</td><td><code>"  hi ".strip()</code> = hi</td></tr><tr><td><code>split()</code></td><td>Text ko list me todo</td><td><code>"a b c".split()</code> = ['a','b','c']</td></tr><tr><td><code>join()</code></td><td>List ko jodo</td><td><code>"-".join(["a","b"])</code> = a-b</td></tr><tr><td><code>replace(a,b)</code></td><td>Badlo</td><td><code>"cat".replace("c","b")</code> = bat</td></tr><tr><td><code>find() index()</code></td><td>Jagah dhundo</td><td>find na mile to -1, index na mile to error</td></tr><tr><td><code>startswith() endswith()</code></td><td>Shuru ya ant check</td><td><code>"a.py".endswith(".py")</code> = True</td></tr></table></div>
+<h3>f-string aur escape</h3>
+<pre><code>naam = "Ishant"
+marks = 85.456
+print(f"{naam} ke marks {marks:.1f}")   # Ishant ke marks 85.5
+print("Line1\nLine2")                   # \n nayi line, \t tab</code></pre><div class="warn"><b>Common mistakes</b><ul><li><code>"Age: " + 20</code> error deta hai. <code>str(20)</code> ya f-string use karo.</li><li>Slicing me stop ko shamil samajhna.</li><li>String badalne ki koshish, jabki wo immutable hai. Method naya string <b>return</b> karta hai, purana nahi badalta.</li></ul></div><h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li>Apna naam variable me rakho aur uska pehla aur aakhri letter print karo.</li><li><code>"python"[1:4]</code> ka output kya hoga?</li></ol></div><div class="do"><b>Medium</b><ol><li>Kisi word ko ulta print karo.</li><li><code>"  Hello World  "</code> se space hatao aur sabhi letter capital karo.</li></ol><details><summary>Hint 1</summary>Slice ka step <code>-1</code> karo.</details><details><summary>Hint 2</summary>Methods ko ek ke baad ek lagao.</details><details><summary>Solution</summary><code>print(word[::-1])</code><br><code>"  Hello World  ".strip().upper()</code> deta hai HELLO WORLD.</details></div><div class="do"><b>Challenge</b><ol><li>Ek program likho jo user se sentence le aur bataye ki usme kitne words hain aur kaun sa word sabse lamba hai.</li></ol></div><div class="check"><b>Checkpoint</b><ol><li>Index aur slice me stop shamil kyun nahi hota?</li><li><code>find()</code> aur <code>index()</code> me kya fark hai?</li><li>String immutable ka kya matlab hai?</li></ol></div><p><b>Summary:</b> String indexed kataar hai, immutable hai. Slicing, methods aur f-string text ke har kaam me aate hain.</p><div class="nav"><a class="alt" href="ch12.html">Pichla</a><a class="alt" href="index.html">Part 2 ki list</a><a href="ch14.html">Agla</a></div></section></main></body></html>
