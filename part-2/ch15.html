@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hi-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 15 – Ishant ki Developer Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css"><style>pre{background:rgba(122,92,255,.12);border-radius:12px;padding:10px 12px;overflow-x:auto;max-width:100%;font:0.9em/1.5 ui-monospace,Consolas,monospace;margin:8px 0}pre code{background:none;padding:0}</style></head>
+<body><main><section class="card"><span class="tag">Chapter 15</span>
+<h2>Functions</h2>
+<p><b>Is chapter ke baad tum ye kar paoge:</b> function banana, arguments dena, value return karwana aur scope samajhna.</p>
+<p><b>Ye kyun seekh rahe hain?</b> Ek hi kaam baar baar likhne ke bajaye ek baar likho aur kahin bhi bulao. Bade programs isi se bante hain.</p>
+<pre><code>def add(a, b):
+    """Do numbers ka jod return karta hai."""
+    return a + b
+
+result = add(3, 4)
+print(result)   # 7</code></pre>
+<ul><li><b>Parameter</b> function ke naam me likha hota hai (<code>a, b</code>). <b>Argument</b> bulate waqt di gayi value (<code>3, 4</code>).</li>
+<li><b>return</b> value wapas deta hai. <b>print</b> sirf screen pe dikhata hai, value wapas nahi karta.</li>
+<li>Pehli string <b>docstring</b> hai, function ka chhota parichay.</li></ul>
+<h3>Default aur keyword arguments</h3>
+<pre><code>def hello(naam, bhasha="Hindi"):
+    return f"{naam} bolta hai {bhasha}"
+
+hello("Ishant")                 # default bhasha
+hello("Ishant", "English")      # positional
+hello(bhasha="Tamil", naam="Ravi")   # keyword, order se farak nahi</code></pre>
+<p><b>Multiple values return:</b> <code>return a, b</code> asal me ek tuple deta hai.</p>
+<h3>Scope</h3>
+<pre><code>x = 10            # global
+def f():
+    x = 5         # local, sirf f ke andar
+    return x
+print(f(), x)     # 5 10</code></pre>
+<p>Function ke andar bane variable function ke bahar nahi dikhte.</p>
+<h3>Recursion ek jhalak</h3>
+<pre><code>def factorial(n):
+    if n == 1:        # base case: yahan ruk jao
+        return 1
+    return n * factorial(n - 1)
+print(factorial(5))   # 120</code></pre><div class="warn"><b>Common mistakes</b><ul><li><code>return</code> ki jagah <code>print</code> likhna, phir result <code>None</code> aata hai.</li><li>Function bulana bhool jana (sirf <code>def</code> likhne se kuch nahi chalta).</li><li>Recursion me base case na likhna.</li></ul></div><h3>Khud karo</h3><div class="do"><b>Easy</b><ol><li>Ek function likho jo "Namaste" print kare aur use 3 baar bulao.</li><li>Do numbers ka guna return karne wala function likho.</li></ol></div><div class="do"><b>Medium</b><ol><li>Ek function banao <code>is_even(n)</code> jo True ya False return kare.</li><li>Ek function banao jo list ka sabse bada aur sabse chhota number return kare.</li></ol><details><summary>Hint 1</summary>Modulo use karo.</details><details><summary>Hint 2</summary><code>max()</code> aur <code>min()</code> use karo.</details><details><summary>Solution</summary><code>def is_even(n): return n % 2 == 0</code><br><code>def hi_lo(L): return max(L), min(L)</code></details></div><div class="do"><b>Challenge</b><ol><li>Ek function likho jo marks ki list le aur average aur grade (A, B, C, Fail) return kare. Alag-alag chhote functions me todo.</li></ol></div><div class="check"><b>Checkpoint</b><ol><li>Parameter aur argument me fark?</li><li><code>return</code> aur <code>print</code> me fark?</li><li>Local variable function ke bahar kyun nahi dikhta?</li></ol></div><p><b>Summary:</b> Function reusable code ka dabba hai. Return value deta hai, scope variables ko andar rakhta hai.</p><div class="nav"><a class="alt" href="ch14.html">Pichla</a><a class="alt" href="index.html">Part 2 ki list</a><a href="ch16.html">Agla</a></div></section></main></body></html>
